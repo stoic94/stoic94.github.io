@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Stoic的鸡脖">
 <meta property="og:description" content="最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：  1.动态规划的应用场景和思路：1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)2.思路:1)定义状态2)状态方程的转移 (后面的例题会对两者做出解释)  其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)  例题一:从前有一只小青蛙…首先我们从一个小的例题开始说">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-27T14:31:15.409Z">
+<meta property="og:updated_time" content="2019-04-27T14:34:36.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法分析与基础笔记（一）：动态规划(1)">
 <meta name="twitter:description" content="最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：  1.动态规划的应用场景和思路：1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)2.思路:1)定义状态2)状态方程的转移 (后面的例题会对两者做出解释)  其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)  例题一:从前有一只小青蛙…首先我们从一个小的例题开始说">
@@ -192,7 +192,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -220,7 +220,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
         
@@ -237,7 +237,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
 
@@ -325,14 +325,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Created: 2019-04-13 13:27:55" itemprop="dateCreated datePublished" datetime="2019-04-13T13:27:55+08:00">2019-04-13</time>
+              <time title="Erstellt: 2019-04-13 13:27:55" itemprop="dateCreated datePublished" datetime="2019-04-13T13:27:55+08:00">2019-04-13</time>
             
 
             
@@ -347,9 +347,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Edited on</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Modified: 2019-04-27 22:31:15" itemprop="dateModified" datetime="2019-04-27T22:31:15+08:00">2019-04-27</time>
+                <time title="Geändert am: 2019-04-27 22:34:36" itemprop="dateModified" datetime="2019-04-27T22:34:36+08:00">2019-04-27</time>
               
             
           </span>
@@ -416,8 +416,10 @@
 </blockquote>
 <p>所以在前k个物体中选取并且可以放下第k个物体时，价值总和最大的状态为max（d[k-1,j]，d [k-1,j-w[k]]+c[k]）。</p>
 <p>因此得到前k个物体背包中的价值总和最大的状态转移方程为：</p>
-<p>$ x^y $  </p>
-<h4 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h4>
+<p>$$</p>
+<p>f(x)=<br>\begin{cases}<br>0&amp; \text{x=0}\<br>1&amp; \text{x!=0}<br>\end{cases}</p>
+<p>$$</p>
+<h4 id="2-实例："><a href="#2-实例：" class="headerlink" title="2)实例："></a>2)实例：</h4>
       
     </div>
 
@@ -485,10 +487,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -509,7 +511,7 @@
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -550,7 +552,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-动态规划的应用场景和思路："><span class="nav-number">1.</span> <span class="nav-text">1.动态规划的应用场景和思路：</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#例题一-从前有一只小青蛙…"><span class="nav-number"></span> <span class="nav-text">例题一:从前有一只小青蛙…</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路："><span class="nav-number">1.</span> <span class="nav-text">思路：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题二-经典的0-1背包问题："><span class="nav-number"></span> <span class="nav-text">例题二:经典的0-1背包问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1）思路："><span class="nav-number">0.1.</span> <span class="nav-text">1）思路：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例："><span class="nav-number">1.</span> <span class="nav-text">实例：</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-动态规划的应用场景和思路："><span class="nav-number">1.</span> <span class="nav-text">1.动态规划的应用场景和思路：</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#例题一-从前有一只小青蛙…"><span class="nav-number"></span> <span class="nav-text">例题一:从前有一只小青蛙…</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路："><span class="nav-number">1.</span> <span class="nav-text">思路：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题二-经典的0-1背包问题："><span class="nav-number"></span> <span class="nav-text">例题二:经典的0-1背包问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1）思路："><span class="nav-number">0.1.</span> <span class="nav-text">1）思路：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-实例："><span class="nav-number">1.</span> <span class="nav-text">2)实例：</span></a></li></div>
             
 
           </div>
@@ -583,7 +585,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -591,7 +593,7 @@
 
 
 
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
 
 
 
