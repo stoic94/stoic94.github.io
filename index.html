@@ -351,7 +351,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-04-27 23:00:10" itemprop="dateModified" datetime="2019-04-27T23:00:10+08:00">2019-04-27</time>
+                <time title="Geändert am: 2019-04-27 23:53:03" itemprop="dateModified" datetime="2019-04-27T23:53:03+08:00">2019-04-27</time>
               
             
           </span>
@@ -410,7 +410,7 @@
 <blockquote>
 <font color="blue">有N件物品和一个容量为V的背包。第i件物品的体积是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大(大家思考一下这是个几维问题，应该用哪一种数据结构？)</font>
 </blockquote>
-<h5 id="1）思路："><a href="#1）思路：" class="headerlink" title="1）思路："></a>1）思路：</h5><p>首先假设在前k-1个物体中选取时，背包中的价值总和最大的状态为d[k-1,j]    </p>
+<h5 id="思路：-1"><a href="#思路：-1" class="headerlink" title="思路："></a>思路：</h5><p>首先假设在前k-1个物体中选取时，背包中的价值总和最大的状态为d[k-1,j]    </p>
 <blockquote>
 <font color="green">（即前k-1个物体的最优解情况，注：这里指的是从前k-1个选取，并不是指在背包里会有k-1个物体)</font>  
 </blockquote>
@@ -421,8 +421,9 @@
 <p>所以在前k个物体中选取并且可以放下第k个物体时，价值总和最大的状态为max（d[k-1,j]，d [k-1,j-c[k]]+w[k]）。</p>
 <p>因此得到前k个物体背包中的价值总和最大的状态转移方程为：</p>
 <p>$$<br>d[k,j]=<br>\begin{cases}<br>d[k-1,j] &amp; \text{c[k]&gt;j}\\<br>max（d[k-1,j]，d [k-1,j-c[k]]+w[k]）&amp; \text{c[k]&lt;j}<br>\end{cases}<br>$$</p>
-<h4 id="2-实例："><a href="#2-实例：" class="headerlink" title="2)实例："></a>2)实例：</h4><p>以下实例直接采用《算法设计与分析基础》中的例子：</p>
+<h5 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h5><p>以下实例直接采用《算法设计与分析基础》中的例子：</p>
 <p><img src="/images/DP.png" alt></p>
+<p>参考资料：<br>《算法设计与分析基础》Anany Levitin 著   潘彦 译</p>
 
           
         
