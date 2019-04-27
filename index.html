@@ -192,7 +192,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -220,7 +220,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
 
   </li>
         
@@ -237,7 +237,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
 
   </li>
 
@@ -327,14 +327,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-04-13 13:27:55" itemprop="dateCreated datePublished" datetime="2019-04-13T13:27:55+08:00">2019-04-13</time>
+              <time title="Created: 2019-04-13 13:27:55" itemprop="dateCreated datePublished" datetime="2019-04-13T13:27:55+08:00">2019-04-13</time>
             
 
             
@@ -349,9 +349,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-04-27 22:22:01" itemprop="dateModified" datetime="2019-04-27T22:22:01+08:00">2019-04-27</time>
+                <time title="Modified: 2019-04-27 22:31:15" itemprop="dateModified" datetime="2019-04-27T22:31:15+08:00">2019-04-27</time>
               
             
           </span>
@@ -395,23 +395,22 @@
 <blockquote>
 <p>其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)</p>
 </blockquote>
-<h4 id="2-例题一-从前有一只小青蛙…"><a href="#2-例题一-从前有一只小青蛙…" class="headerlink" title="2.例题一:从前有一只小青蛙…"></a>2.例题一:从前有一只小青蛙…</h4><p>首先我们从一个小的例题开始说起：</p>
+<h3 id="例题一-从前有一只小青蛙…"><a href="#例题一-从前有一只小青蛙…" class="headerlink" title="例题一:从前有一只小青蛙…"></a>例题一:从前有一只小青蛙…</h3><p>首先我们从一个小的例题开始说起：</p>
 <blockquote>
 <font color="blue">从前有一只小青蛙要登上一个十级的台阶，它有两种上台阶的方式：上一级或是上两级。请你告诉这只小青蛙它有多少种登上这十级台阶的方式。</font>
 </blockquote>
 <p>这就是一个最简单的使用动态规划思想解决的问题:</p>
-<p>#####思路：</p>
-<p>首先我们先假设小青蛙上第八级台阶的方式有x种,上第九级台阶的方式有y种,那么登上第十级台阶的方式就是x+y种(定义状态.)</p>
+<h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><p>首先我们先假设小青蛙上第八级台阶的方式有x种,上第九级台阶的方式有y种,那么登上第十级台阶的方式就是x+y种(定义状态.)</p>
 <p>那么上第九级的台阶的方式,又是上第八级台阶加上第七级台阶的方式的和,以此类推.(状态方程的转移.)</p>
 <p>最后登上第一级台阶的方式只有一种,登上第二级台阶的方式只有两种.(如果将问题改变为登上n级台阶呢？有没有回想起递归?&lt;- &lt;-)</p>
 <p>最后实现的代码如下:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">climbLadder</span><span class="params">(number)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> number <span class="keyword">in</span> (<span class="number">1</span>,<span class="number">2</span>): <span class="comment">#递归的结束条件，登上第一级台阶和第二级台阶的方式</span></span><br><span class="line">        <span class="keyword">return</span> number</span><br><span class="line">    <span class="keyword">return</span>  climbLadder(number<span class="number">-1</span>)+climbLadder(number<span class="number">-2</span>)</span><br><span class="line">     </span><br><span class="line"><span class="comment">#测试 </span></span><br><span class="line">a= climbLadder(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">print</span> (a)</span><br></pre></td></tr></table></figure>
 <p>上面的算法并不是最优的方法，其中重复了很多次的运算，其实还可以通过记忆化和自底向上优化（这个下次再说哈）</p>
-<h3 id="3-例题二-经典的0-1背包问题："><a href="#3-例题二-经典的0-1背包问题：" class="headerlink" title="3.例题二:经典的0-1背包问题："></a>3.例题二:经典的0-1背包问题：</h3><p>（MD，背包问题真是坑）</p>
+<h3 id="例题二-经典的0-1背包问题："><a href="#例题二-经典的0-1背包问题：" class="headerlink" title="例题二:经典的0-1背包问题："></a>例题二:经典的0-1背包问题：</h3><p>（MD，背包问题真是坑）</p>
 <blockquote>
 <font color="blue">有N件物品和一个容量为V的背包。第i件物品的体积是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大(大家思考一下这是个几维问题，应该用哪一种数据结构？)</font>
 </blockquote>
-<p>#####1）思路：<br>首先假设在前k-1个物体中选取时，背包中的价值总和最大的状态为d[k-1,j]    </p>
+<h5 id="1）思路："><a href="#1）思路：" class="headerlink" title="1）思路："></a>1）思路：</h5><p>首先假设在前k-1个物体中选取时，背包中的价值总和最大的状态为d[k-1,j]    </p>
 <blockquote>
 <font color="green">（即前k-1个物体的最优解情况，注：这里指的是从前k-1个选取，并不是指在背包里会有k-1个物体)</font>  
 </blockquote>
@@ -421,7 +420,7 @@
 </blockquote>
 <p>所以在前k个物体中选取并且可以放下第k个物体时，价值总和最大的状态为max（d[k-1,j]，d [k-1,j-w[k]]+c[k]）。</p>
 <p>因此得到前k个物体背包中的价值总和最大的状态转移方程为：</p>
-<p>$$ \frac{x}{2y} +\frac{x-y}{x+y} $$</p>
+<p>$ x^y $  </p>
 <h4 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h4>
           
         
@@ -506,7 +505,7 @@
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
@@ -563,7 +562,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -571,7 +570,7 @@
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
 
 
 
@@ -691,6 +690,57 @@
   
 
   
+  
+
+  
+  
+    
+      
+    
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
 
   
 
