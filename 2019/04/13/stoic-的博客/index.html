@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Stoic的鸡脖">
 <meta property="og:description" content="最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：  1.动态规划的应用场景和思路：1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)2.思路:1)定义状态2)状态方程的转移 (后面的例题会对两者做出解释)  其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)  2.例题一:从前有一只小青蛙…首先我们从一个小的例题开">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-27T14:13:55.929Z">
+<meta property="og:updated_time" content="2019-04-27T14:22:01.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法分析与基础笔记（一）：动态规划(1)">
 <meta name="twitter:description" content="最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：  1.动态规划的应用场景和思路：1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)2.思路:1)定义状态2)状态方程的转移 (后面的例题会对两者做出解释)  其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)  2.例题一:从前有一只小青蛙…首先我们从一个小的例题开">
@@ -349,7 +349,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-04-27 22:13:55" itemprop="dateModified" datetime="2019-04-27T22:13:55+08:00">2019-04-27</time>
+                <time title="Geändert am: 2019-04-27 22:22:01" itemprop="dateModified" datetime="2019-04-27T22:22:01+08:00">2019-04-27</time>
               
             
           </span>
@@ -405,23 +405,20 @@
 <p>上面的算法并不是最优的方法，其中重复了很多次的运算，其实还可以通过记忆化和自底向上优化（这个下次再说哈）</p>
 <h3 id="3-例题二-经典的0-1背包问题："><a href="#3-例题二-经典的0-1背包问题：" class="headerlink" title="3.例题二:经典的0-1背包问题："></a>3.例题二:经典的0-1背包问题：</h3><p>（MD，背包问题真是坑）</p>
 <blockquote>
-<font color="yellow">有N件物品和一个容量为V的背包。第i件物品的体积是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大(大家思考一下这是个几维问题，应该用哪一种数据结构？)</font>
+<font color="blue">有N件物品和一个容量为V的背包。第i件物品的体积是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大(大家思考一下这是个几维问题，应该用哪一种数据结构？)</font>
 </blockquote>
 <p>#####1）思路：<br>首先假设在前k-1个物体中选取时，背包中的价值总和最大的状态为d[k-1,j]    </p>
 <blockquote>
-<font color="yellow">（即前k-1个物体的最优解情况，注：这里指的是从前k-1个选取，并不是指在背包里会有k-1个物体)</font>  
+<font color="green">（即前k-1个物体的最优解情况，注：这里指的是从前k-1个选取，并不是指在背包里会有k-1个物体)</font>  
 </blockquote>
 <p>针对前k个物体，就会分为背包里有没有第k个物体两种情况 :<br>1.不可以放下第k个物体（c[k]&gt;j）：没办法放下第k个物体，d[k-1,j]就是子集的总价值最大<br>2.可以放下第k个物（c[k]&lt;j）：这时可以放下第k个物体，但是要不要放k个物体？<br>如果不放入背包，其中的价值总和最大的状态仍为d[k-1,j] 。<br>如果放入，最大的状态为d [k-1,j-w[k]]+c[k]，其中的d [k-1,j-w[k]]表示在前k-1个物体中，背包容量是j-w[k]情况下的最大价值,c[k]是啥，不用我说了吧。</p>
 <blockquote>
-<p>（解释一下，其实这里的还从前k个物体中选取放入背包中形成最大价值，所以放入后的价值不一定大于k-1个物体在背包中的最优价值d[k-1,j])  </p>
+<font color="orange">（解释一下，其实这里的还从前k个物体中选取放入背包中形成最大价值，所以放入后的价值不一定大于k-1个物体在背包中的最优价值d[k-1,j]) </font>
 </blockquote>
 <p>所以在前k个物体中选取并且可以放下第k个物体时，价值总和最大的状态为max（d[k-1,j]，d [k-1,j-w[k]]+c[k]）。</p>
 <p>因此得到前k个物体背包中的价值总和最大的状态转移方程为：</p>
-<p>$$  </p>
-<p>\begin{equation}<br>D(x) = \begin{cases}<br>d[k-1,j], &amp; \text{if } x \in \mathbb{Q}; \<br>max（d[k-1,j]，d [k-1,j-w[k]]+c[k]）, &amp; \text{if } x \in<br>     \mathbb{R}\setminus\mathbb{Q}.<br>\end{cases}<br>\end{equation}</p>
-<p>$$</p>
-<p>####实例：</p>
-
+<p>$$ \frac{x}{2y} +\frac{x-y}{x+y} $$</p>
+<h4 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h4>
       
     </div>
 
@@ -554,7 +551,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-动态规划的应用场景和思路："><span class="nav-number">1.</span> <span class="nav-text">1.动态规划的应用场景和思路：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-例题一-从前有一只小青蛙…"><span class="nav-number">2.</span> <span class="nav-text">2.例题一:从前有一只小青蛙…</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#3-例题二-经典的0-1背包问题："><span class="nav-number"></span> <span class="nav-text">3.例题二:经典的0-1背包问题：</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-动态规划的应用场景和思路："><span class="nav-number">1.</span> <span class="nav-text">1.动态规划的应用场景和思路：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-例题一-从前有一只小青蛙…"><span class="nav-number">2.</span> <span class="nav-text">2.例题一:从前有一只小青蛙…</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#3-例题二-经典的0-1背包问题："><span class="nav-number"></span> <span class="nav-text">3.例题二:经典的0-1背包问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例："><span class="nav-number">1.</span> <span class="nav-text">实例：</span></a></li></ol></li></div>
             
 
           </div>
