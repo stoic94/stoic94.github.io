@@ -103,10 +103,12 @@
 <meta property="og:site_name" content="Stoic的鸡脖">
 <meta property="og:description" content="最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：  1.动态规划的应用场景和思路：1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)2.思路:1)定义状态2)状态方程的转移 (后面的例题会对两者做出解释)  其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)  例题一:从前有一只小青蛙…首先我们从一个小的例题开始说">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-27T14:40:01.766Z">
+<meta property="og:image" content="http://yoursite.com/images/DP.png">
+<meta property="og:updated_time" content="2019-04-27T15:00:10.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法分析与基础笔记（一）：动态规划(1)">
 <meta name="twitter:description" content="最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：  1.动态规划的应用场景和思路：1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)2.思路:1)定义状态2)状态方程的转移 (后面的例题会对两者做出解释)  其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)  例题一:从前有一只小青蛙…首先我们从一个小的例题开始说">
+<meta name="twitter:image" content="http://yoursite.com/images/DP.png">
 
 
 
@@ -349,7 +351,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-04-27 22:40:01" itemprop="dateModified" datetime="2019-04-27T22:40:01+08:00">2019-04-27</time>
+                <time title="Geändert am: 2019-04-27 23:00:10" itemprop="dateModified" datetime="2019-04-27T23:00:10+08:00">2019-04-27</time>
               
             
           </span>
@@ -416,10 +418,10 @@
 </blockquote>
 <p>所以在前k个物体中选取并且可以放下第k个物体时，价值总和最大的状态为max（d[k-1,j]，d [k-1,j-c[k]]+w[k]）。</p>
 <p>因此得到前k个物体背包中的价值总和最大的状态转移方程为：</p>
-<p>$$</p>
-<p>d[k,j]=<br>\begin{cases}<br>d[k-1,j] &amp; \text{c[k]&gt;j}\\<br>max（d[k-1,j]，d [k-1,j-c[k]]+w[k]）&amp; \text{c[k]&lt;j}<br>\end{cases}</p>
-<p>$$</p>
-<h4 id="2-实例："><a href="#2-实例：" class="headerlink" title="2)实例："></a>2)实例：</h4>
+<p>$$<br>d[k,j]=<br>\begin{cases}<br>d[k-1,j] &amp; \text{c[k]&gt;j}\\<br>max（d[k-1,j]，d [k-1,j-c[k]]+w[k]）&amp; \text{c[k]&lt;j}<br>\end{cases}<br>$$</p>
+<h4 id="2-实例："><a href="#2-实例：" class="headerlink" title="2)实例："></a>2)实例：</h4><p>以下实例直接采用《算法设计与分析基础》中的例子：</p>
+<p><img src="/images/DP.png" alt></p>
+
       
     </div>
 
