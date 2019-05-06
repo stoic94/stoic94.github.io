@@ -96,16 +96,19 @@
 
 
 
-  <meta name="description" content="别闹">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Stoic的鸡脖">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：  1.动态规划的应用场景和思路：1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)2.思路:1)定义状态2)状态方程的转移 (后面的例题会对两者做出解释)  其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)  例题一:从前有一只小青蛙…首先我们从一个小的例题开始说">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法分析与基础笔记（一）：动态规划(1)">
+<meta property="og:url" content="http://yoursite.com/2019/04/27/算法/index.html">
 <meta property="og:site_name" content="Stoic的鸡脖">
-<meta property="og:description" content="别闹">
+<meta property="og:description" content="最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：  1.动态规划的应用场景和思路：1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)2.思路:1)定义状态2)状态方程的转移 (后面的例题会对两者做出解释)  其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)  例题一:从前有一只小青蛙…首先我们从一个小的例题开始说">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/images/DP.png">
+<meta property="og:updated_time" content="2019-05-06T03:31:43.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stoic的鸡脖">
-<meta name="twitter:description" content="别闹">
+<meta name="twitter:title" content="算法分析与基础笔记（一）：动态规划(1)">
+<meta name="twitter:description" content="最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：  1.动态规划的应用场景和思路：1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)2.思路:1)定义状态2)状态方程的转移 (后面的例题会对两者做出解释)  其实动态规划真正的核心是如何找到最优子结构(类比一下数学归纳法的思想)  例题一:从前有一只小青蛙…首先我们从一个小的例题开始说">
+<meta name="twitter:image" content="http://yoursite.com/images/DP.png">
 
 
 
@@ -113,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/27/算法/">
 
 
 
@@ -123,7 +126,7 @@
   };
 </script>
 
-  <title>Stoic的鸡脖</title>
+  <title>算法分析与基础笔记（一）：动态规划(1) | Stoic的鸡脖</title>
   
 
 
@@ -171,8 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,7 +212,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -272,177 +274,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/29/Sql(1)2019_04_29/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Stoic">
-      <meta itemprop="description" content="别闹">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stoic的鸡脖">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/29/Sql(1)2019_04_29/" class="post-title-link" itemprop="url">数据库 （错题笔记）：</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-04-29 13:27:55" itemprop="dateCreated datePublished" datetime="2019-04-29T13:27:55+08:00">2019-04-29</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-05-06 11:31:43" itemprop="dateModified" datetime="2019-05-06T11:31:43+08:00">2019-05-06</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <hr>
-<hr>
-<h4 id="1-查找薪水涨幅超过15次的员工号emp-no以及其对应的涨幅次数t"><a href="#1-查找薪水涨幅超过15次的员工号emp-no以及其对应的涨幅次数t" class="headerlink" title="1.查找薪水涨幅超过15次的员工号emp_no以及其对应的涨幅次数t"></a>1.查找薪水涨幅超过15次的员工号emp_no以及其对应的涨幅次数t</h4><p>CREATE TABLE <code>salaries</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>salary</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));    </p>
-<h5 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h5><p>此题应注意以下四点：<br>1、用COUNT()函数和GROUP BY语句可以统计同一emp_no值的记录条数<br>2、根据题意，输出的涨幅次数为t，故用AS语句将COUNT(emp_no)的值转换为t<br>3、由于COUNT()函数不可用于WHERE语句中，故使用HAVING语句来限定t&gt;15的条件<br>4、最后存在一个理解误区，涨幅超过15次，salaries中相应的记录数应该超过16（从第2条记录开始算作第1次涨幅），不过题目为了简单起见，将第1条记录当作第1次涨幅，所以令t&gt;15即可  </p>
-<blockquote>
-<p><front color="red"> 注意： 严格来说，下一条salary高于本条才算涨幅，但本题只要出现了一条记录就算一次涨幅，salary相同可以理解为涨幅为0，salary变少理解为涨幅为负 <front><br>答案（非标准）：<br>select a.<em> from(<br>select emp_no,count(</em>) as t<br>from salaries<br>group by emp_no) as a<br>where t&gt;15</front></front></p>
-</blockquote>
-<blockquote>
-<p>注意使用 distinct 和 group by 之间的效率问题</p>
-</blockquote>
-<p>#####2.查找所有员工入职时候的薪水情况，给出emp_no以及salary， 并按照emp_no进行逆序<br>CREATE TABLE <code>employees</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>birth_date</code> date NOT NULL,<br><code>first_name</code> varchar(14) NOT NULL,<br><code>last_name</code> varchar(16) NOT NULL,<br><code>gender</code> char(1) NOT NULL,<br><code>hire_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>));<br>CREATE TABLE <code>salaries</code> (<br><code>emp_no</code> int(11) NOT NULL,<br><code>salary</code> int(11) NOT NULL,<br><code>from_date</code> date NOT NULL,<br><code>to_date</code> date NOT NULL,<br>PRIMARY KEY (<code>emp_no</code>,<code>from_date</code>));  </p>
-<blockquote>
-<p>此题应注意以下四个知识点：<br>1、由于测试数据中，salaries.emp_no 不唯一（因为号码为 emp_no 的员工会有多次涨薪的可能，所以在 salaries 中对应的记录不止一条），employees.emp_no 唯一，<br><br>即 salaries 的数据会多于 employees，因此需先找到 employees.emp_no 在 salaries 表中对应的记录salaries.emp_no，则有限制条件 e.emp_no = s.emp_no<br>2、根据题意注意到 salaries.from_date 和 employees.hire_date 的值应该要相等，因此有限制条件 e.hire_date = s.from_date<br>3、根据题意要按照 emp_no 值逆序排列，因此最后要加上 ORDER BY e.emp_no DESC<br>4、为了代码良好的可读性，运用了 Alias 别名语句，将 employees 简化为 e，salaries 简化为s，即 employees AS e 与 salaries AS s，其中 AS 可以省略.</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -474,10 +308,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/27/算法/" class="post-title-link" itemprop="url">算法分析与基础笔记（一）：动态规划(1)</a>
+          <h1 class="post-title" itemprop="name headline">算法分析与基础笔记（一）：动态规划(1)
+
               
             
           </h1>
@@ -553,9 +385,7 @@
       
 
       
-        
-          
-            <hr>
+        <hr>
 <p>最近开始预习算法，刚好学到动态规划这个算法思想，赶快掏出小本本，写一下自己的心得体会：</p>
 <hr>
 <h4 id="1-动态规划的应用场景和思路："><a href="#1-动态规划的应用场景和思路：" class="headerlink" title="1.动态规划的应用场景和思路："></a>1.动态规划的应用场景和思路：</h4><p>1.动态规划应用的场景:由交叠子问题构成的问题(想一想分治法应用的场景?)<br><br>2.思路:<br><br>1)定义状态<br><br>2)状态方程的转移</p>
@@ -593,8 +423,6 @@
 <p><img src="/images/DP.png" alt></p>
 <p>参考资料：<br>《算法设计与分析基础》Anany Levitin 著   潘彦 译</p>
 
-          
-        
       
     </div>
 
@@ -617,169 +445,32 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/13/Spring/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Stoic">
-      <meta itemprop="description" content="别闹">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Stoic的鸡脖">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/13/Spring/" class="post-title-link" itemprop="url">Spring 框架（一）：</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2019/04/13/Spring/" rel="next" title="Spring 框架（一）：">
+                <i class="fa fa-chevron-left"></i> Spring 框架（一）：
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/04/29/Sql(1)2019_04_29/" rel="prev" title="数据库 （错题笔记）：">
+                数据库 （错题笔记）： <i class="fa fa-chevron-right"></i>
+              </a>
             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-04-13 13:27:55" itemprop="dateCreated datePublished" datetime="2019-04-13T13:27:55+08:00">2019-04-13</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-05-06 11:21:57" itemprop="dateModified" datetime="2019-05-06T11:21:57+08:00">2019-05-06</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <hr>
-<hr>
-<h4 id="1-动态规划的应用场景和思路："><a href="#1-动态规划的应用场景和思路：" class="headerlink" title="1.动态规划的应用场景和思路："></a>1.动态规划的应用场景和思路：</h4><h3 id="例题一"><a href="#例题一" class="headerlink" title="例题一:"></a>例题一:</h3><h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><h3 id="例题二"><a href="#例题二" class="headerlink" title="例题二:"></a>例题二:</h3><h5 id="思路：-1"><a href="#思路：-1" class="headerlink" title="思路："></a>思路：</h5><h5 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h5><p>参考资料：</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -789,14 +480,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -816,8 +508,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -876,6 +577,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-动态规划的应用场景和思路："><span class="nav-number">1.</span> <span class="nav-text">1.动态规划的应用场景和思路：</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#例题一-从前有一只小青蛙…"><span class="nav-number"></span> <span class="nav-text">例题一:从前有一只小青蛙…</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路："><span class="nav-number">1.</span> <span class="nav-text">思路：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题二-经典的0-1背包问题："><span class="nav-number"></span> <span class="nav-text">例题二:经典的0-1背包问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#思路：-1"><span class="nav-number">0.1.</span> <span class="nav-text">思路：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实例："><span class="nav-number">0.2.</span> <span class="nav-text">实例：</span></a></li></ol></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1004,6 +722,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -1020,6 +742,8 @@
   
 
 
+  
+
 
   
 
@@ -1034,14 +758,6 @@
   
 
   
-  
-    
-      
-    
-      
-    
-      
-    
   
 
   
